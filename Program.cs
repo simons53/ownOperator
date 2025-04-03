@@ -1,4 +1,4 @@
-﻿namespace ownOperator
+namespace ownOperator
 {
     public class Valorant
     {
@@ -74,8 +74,8 @@
 
                 Console.WriteLine("Minutes?");
                 day1Games[day1Counter].Minutes = double.Parse(Console.ReadLine());
-                day1Games[0].TotalGames++;
-                day1Games[0].TotalMinutes += day1Games[day1Counter].Minutes;
+                day1Games[0]++;
+                day1Games[0] += day1Games[day1Counter].Minutes;
 
                 Console.WriteLine("Did you play any other maps? (any key for yes, N for no)");
                 string moreMaps = Console.ReadLine();
@@ -98,8 +98,8 @@
 
                 Console.WriteLine("Minutes?");
                 day2Games[day2Counter].Minutes = double.Parse(Console.ReadLine());
-                day2Games[0].TotalGames++;
-                day2Games[0].TotalMinutes += day2Games[day2Counter].Minutes;
+                day2Games[0]++;
+                day2Games[0] += day2Games[day2Counter].Minutes;
 
                 Console.WriteLine("Did you play any other maps? (any key for yes, N for no)");
                 string moreMaps = Console.ReadLine();
@@ -148,7 +148,7 @@
 
             Console.WriteLine("_______________________________");
    
-            if (day1Games[0].TotalMinutes > day2Games[0].TotalMinutes)
+            if (day1Games[0] > day2Games[0])
             {
                 double difference = day1Games[0].TotalMinutes - day2Games[0].TotalMinutes;
                 Console.WriteLine($"Your game(s) lasted {difference} Minutes more yesterday than today");
